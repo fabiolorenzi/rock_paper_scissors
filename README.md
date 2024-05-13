@@ -1,0 +1,1 @@
+A simple project developed with the purpose of improving my knowledge in C++.
