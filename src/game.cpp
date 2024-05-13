@@ -32,10 +32,27 @@ Choice makePcChoice()
     return static_cast<Choice>(pcChoice);
 }
 
+std::string convertChoiceToString(Choice choice)
+{
+    std::string result = "";
+    switch (choice) {
+        case Choice::Rock:
+            result = "Rock";
+            break;
+        case Choice::Paper:
+            result = "Paper";
+            break;
+        case Choice::Scissors:
+            result = "Scissors";
+            break;
+    }
+    return result;
+}
+
 Result gameFunc(Choice playerChoice, Choice pcChoice)
 {
-    std::cout << "You have chosen " << playerChoice << std::endl;
-    std::cout << "PC has chosen " << pcChoice << std::endl;
+    std::cout << "You have chosen " << convertChoiceToString(playerChoice) << std::endl;
+    std::cout << "PC has chosen " << convertChoiceToString(pcChoice) << std::endl;
 
     Result result;
     if (playerChoice == pcChoice) {
