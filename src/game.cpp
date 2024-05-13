@@ -27,6 +27,7 @@ Choice makeChoice()
 
 Choice makePcChoice()
 {
+    std::srand (std::time(0));
     int pcChoice = rand() % 3;
     return static_cast<Choice>(pcChoice);
 }
