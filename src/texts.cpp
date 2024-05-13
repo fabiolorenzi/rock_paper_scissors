@@ -23,9 +23,11 @@ void resultScript(Result result)
 
 bool repeatGameScript()
 {
-    int playerChoice {};
+    int playerChoice {0};
     std::cout << "Do you want to play again? No: 0, Yes: 1" << std::endl;
+    std::cin >> playerChoice;
     if (playerChoice == 1) {
+        std::cout << std::endl;
         return true;
     }
     return false;
